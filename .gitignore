@@ -45,6 +45,11 @@ data/
 *.nc
 *.hdf
 
+# Generated outputs
+*.png
+*.jpg
+*.jpeg
+
 # IDE
 .vscode/
 .idea/
