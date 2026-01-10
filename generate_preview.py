@@ -21,14 +21,14 @@ print("Generating land coverage analysis preview...")
 
 # Define study area
 study_area = {
-    'name': 'Sample Amazon Region',
+    'name': 'Eastern DRC (Kivu Region)',
     'bbox': {
-        'north': -3.0,
-        'south': -4.0,
-        'east': -62.0,
-        'west': -63.0
+        'north': -1.0,
+        'south': -3.0,
+        'east': 29.5,
+        'west': 27.5
     },
-    'center': [-3.5, -62.5]
+    'center': [-2.0, 28.5]
 }
 
 # Time periods for analysis

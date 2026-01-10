@@ -48,19 +48,19 @@ print("Libraries loaded successfully!")
 
 # Study Area Definition
 
-For this analysis, we'll focus on a sample area. You can modify the coordinates to analyze any region of interest.
+For this analysis, we'll focus on the Democratic Republic of Congo (DRC), specifically the eastern region which has experienced significant land use changes. You can modify the coordinates to analyze any region of interest.
 
 ```{python}
-# Define study area (example: Amazon region)
+# Define study area (Eastern DRC - Kivu region)
 study_area = {
-    'name': 'Sample Amazon Region',
+    'name': 'Eastern DRC (Kivu Region)',
     'bbox': {
-        'north': -3.0,
-        'south': -4.0,
-        'east': -62.0,
-        'west': -63.0
+        'north': -1.0,
+        'south': -3.0,
+        'east': 29.5,
+        'west': 27.5
     },
-    'center': [-3.5, -62.5]
+    'center': [-2.0, 28.5]
 }
 
 print(f"Study Area: {study_area['name']}")
