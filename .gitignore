@@ -30,6 +30,7 @@ wheels/
 /.quarto/
 _site/
 *.html
+!land_coverage_analysis.html
 *_files/
 
 # Data files
