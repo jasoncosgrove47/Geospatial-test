@@ -262,11 +262,14 @@ folium.Marker(
     icon=folium.Icon(color='green', icon='info-sign')
 ).add_to(m)
 
-# Save map to file instead of embedding to avoid escaping issues
+# Get map HTML for embedding
+map_html = m._repr_html_()
+
+# Also save to separate file for reference
 map_file = 'study_area_map.html'
 m.save(map_file)
 
-print("✓ Map created and saved to study_area_map.html")
+print("✓ Map created and ready for embedding")
 
 # ============================================================================
 # STATISTICAL ANALYSIS
@@ -477,10 +480,9 @@ html_content = f'''<!DOCTYPE html>
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             margin: 20px 0;
         }}
-        .map-container iframe {{
+        .map-container .folium-map {{
             width: 100%;
             height: 100%;
-            border: none;
         }}
         .code-block {{
             background: #1a1b26;
@@ -576,7 +578,7 @@ html_content = f'''<!DOCTYPE html>
         <div class="section">
             <h2>🗺️ Study Area Map</h2>
             <div class="map-container">
-                <iframe src="{map_file}"></iframe>
+                {map_html}
             </div>
         </div>
 
