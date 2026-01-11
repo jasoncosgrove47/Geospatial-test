@@ -147,6 +147,12 @@
             border-radius: 12px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
 </head>
 <body>
     <div class="container">
@@ -230,7 +236,7 @@ for i, year in enumerate(years):
             </div>
 
             <p><strong>Data Source:</strong> Synthetic (based on FAO/World Bank documented rates)</p>
-            <p><strong>Generated:</strong> 2026-01-11 20:40:14</p>
+            <p><strong>Generated:</strong> 2026-01-11 20:45:46</p>
         </div>
 
         <div class="section">
@@ -259,55 +265,26 @@ for i, year in enumerate(years):
         <div class="section">
             <h2>🗺️ Study Area Map</h2>
             <div class="map-container">
-                <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
+                
     
-    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
     
-        &lt;script&gt;
+            <div class="folium-map" id="map_d2cee69c3460f75c8a58310ccfb43216" ></div>
+        
+
+            </div>
+            <script>
             L_NO_TOUCH = false;
             L_DISABLE_3D = false;
-        &lt;/script&gt;
-    
-    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
-    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
-    
-            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
-            &lt;style&gt;
-                #map_4683bf458adef948361a9563b6c134b4 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            &lt;/style&gt;
-        
-&lt;/head&gt;
-&lt;body&gt;
+        </script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+<script>
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_4683bf458adef948361a9563b6c134b4&quot; &gt;&lt;/div&gt;
-        
-&lt;/body&gt;
-&lt;script&gt;
-    
-    
-            var map_4683bf458adef948361a9563b6c134b4 = L.map(
-                &quot;map_4683bf458adef948361a9563b6c134b4&quot;,
+            var map_d2cee69c3460f75c8a58310ccfb43216 = L.map(
+                "map_d2cee69c3460f75c8a58310ccfb43216",
                 {
                     center: [-2.0, 28.5],
                     crs: L.CRS.EPSG3857,
@@ -321,65 +298,63 @@ for i, year in enumerate(years):
 
         
     
-            var tile_layer_118448b2aef5a22755aa3761cf4e2115 = L.tileLayer(
-                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
-                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            var tile_layer_a31bc1a69820da5c4e744f9a34ddce8f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_118448b2aef5a22755aa3761cf4e2115.addTo(map_4683bf458adef948361a9563b6c134b4);
+            tile_layer_a31bc1a69820da5c4e744f9a34ddce8f.addTo(map_d2cee69c3460f75c8a58310ccfb43216);
         
     
-            var rectangle_4cbb7a2a221d4e75e6c850db2f5c6376 = L.rectangle(
+            var rectangle_9f174cf1c13b5c9bb6bed10c70ec09bc = L.rectangle(
                 [[-3.0, 27.5], [-1.0, 29.5]],
-                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#4CAF50&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#4CAF50&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_4683bf458adef948361a9563b6c134b4);
+                {"bubblingMouseEvents": true, "color": "#4CAF50", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4CAF50", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d2cee69c3460f75c8a58310ccfb43216);
         
     
-        var popup_6f2ae8c88ff569ddb018285d01db5aab = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_ffce0463caf8333fae38fd1511b17ab5 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_d29bb7745a20d683a41de5c4ffb3e701 = $(`&lt;div id=&quot;html_d29bb7745a20d683a41de5c4ffb3e701&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Study Area: Eastern DRC (Kivu Region)&lt;/div&gt;`)[0];
-                popup_6f2ae8c88ff569ddb018285d01db5aab.setContent(html_d29bb7745a20d683a41de5c4ffb3e701);
+                var html_b2e128ccaecddc348d62702ac654ceeb = $(`<div id="html_b2e128ccaecddc348d62702ac654ceeb" style="width: 100.0%; height: 100.0%;">Study Area: Eastern DRC (Kivu Region)</div>`)[0];
+                popup_ffce0463caf8333fae38fd1511b17ab5.setContent(html_b2e128ccaecddc348d62702ac654ceeb);
             
         
 
-        rectangle_4cbb7a2a221d4e75e6c850db2f5c6376.bindPopup(popup_6f2ae8c88ff569ddb018285d01db5aab)
+        rectangle_9f174cf1c13b5c9bb6bed10c70ec09bc.bindPopup(popup_ffce0463caf8333fae38fd1511b17ab5)
         ;
 
         
     
     
-            var marker_c441849921a035bf76d7318bb08238b1 = L.marker(
+            var marker_4ad30f5155364d821003fbfe2a5d53c1 = L.marker(
                 [-2.0, 28.5],
                 {}
-            ).addTo(map_4683bf458adef948361a9563b6c134b4);
+            ).addTo(map_d2cee69c3460f75c8a58310ccfb43216);
         
     
-            var icon_5c866a40aae8c2c4f90749d4ca86fb19 = L.AwesomeMarkers.icon(
-                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            var icon_a8b0411ed8f6d4ca92e4875e50054a7b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_c441849921a035bf76d7318bb08238b1.setIcon(icon_5c866a40aae8c2c4f90749d4ca86fb19);
+            marker_4ad30f5155364d821003fbfe2a5d53c1.setIcon(icon_a8b0411ed8f6d4ca92e4875e50054a7b);
         
     
-        var popup_1715202e40ce0ec985776be30466462c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_ff6de86112044f8af4c56c2f8b3e3987 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_870f8a63b8ea045ca69e854b45cd7e69 = $(`&lt;div id=&quot;html_870f8a63b8ea045ca69e854b45cd7e69&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Eastern DRC (Kivu Region)&lt;/b&gt;&lt;br&gt;Eastern DRC&lt;/div&gt;`)[0];
-                popup_1715202e40ce0ec985776be30466462c.setContent(html_870f8a63b8ea045ca69e854b45cd7e69);
+                var html_58fabe1530ca09f860c7dfb048418368 = $(`<div id="html_58fabe1530ca09f860c7dfb048418368" style="width: 100.0%; height: 100.0%;"><b>Eastern DRC (Kivu Region)</b><br>Eastern DRC</div>`)[0];
+                popup_ff6de86112044f8af4c56c2f8b3e3987.setContent(html_58fabe1530ca09f860c7dfb048418368);
             
         
 
-        marker_c441849921a035bf76d7318bb08238b1.bindPopup(popup_1715202e40ce0ec985776be30466462c)
+        marker_4ad30f5155364d821003fbfe2a5d53c1.bindPopup(popup_ff6de86112044f8af4c56c2f8b3e3987)
         ;
 
         
     
-&lt;/script&gt;
-&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
-            </div>
+</script>
         </div>
 
         <div class="section">
@@ -522,7 +497,7 @@ for i, year in enumerate(years):
             <p><strong>Land Coverage Analysis</strong></p>
             <p>Democratic Republic of Congo - Eastern Kivu Region</p>
             <p>Data Source: Synthetic (based on FAO/World Bank documented rates)</p>
-            <p>Generated: 2026-01-11 20:40:14</p>
+            <p>Generated: 2026-01-11 20:45:46</p>
         </div>
     </div>
 </body>
