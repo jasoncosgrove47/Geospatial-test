@@ -262,12 +262,31 @@ folium.Marker(
     icon=folium.Icon(color='green', icon='info-sign')
 ).add_to(m)
 
-# Get map HTML for embedding
-map_html = m._repr_html_()
+# Get map HTML - save to temp file and read it back
+import tempfile
+with tempfile.NamedTemporaryFile(mode='w', suffix='.html', delete=False) as f:
+    temp_map_file = f.name
+    m.save(temp_map_file)
 
-# Also save to separate file for reference
-map_file = 'study_area_map.html'
-m.save(map_file)
+with open(temp_map_file, 'r') as f:
+    full_map_html = f.read()
+
+import os
+os.unlink(temp_map_file)
+
+# Extract the body content and scripts from the map HTML
+import re
+# Get everything between <body> and </body>
+body_match = re.search(r'<body>(.*?)</body>', full_map_html, re.DOTALL)
+map_body = body_match.group(1) if body_match else ''
+
+# Get all script tags
+scripts = re.findall(r'<script[^>]*>.*?</script>', full_map_html, re.DOTALL)
+map_scripts = '\n'.join(scripts)
+
+# Get all link tags for CSS
+links = re.findall(r'<link[^>]*>', full_map_html)
+map_links = '\n'.join(links)
 
 print("✓ Map created and ready for embedding")
 
@@ -511,6 +530,7 @@ html_content = f'''<!DOCTYPE html>
             border-radius: 12px;
         }}
     </style>
+    {map_links}
 </head>
 <body>
     <div class="container">
@@ -578,8 +598,9 @@ html_content = f'''<!DOCTYPE html>
         <div class="section">
             <h2>🗺️ Study Area Map</h2>
             <div class="map-container">
-                {map_html}
+                {map_body}
             </div>
+            {map_scripts}
         </div>
 
         <div class="section">
