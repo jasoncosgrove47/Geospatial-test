@@ -191,7 +191,12 @@ print("="*70)
 categories = ['Forest', 'Cropland', 'Urban', 'Water', 'Bare Land']
 colors = ['#2d5f2e', '#f4a460', '#8b0000', '#4682b4', '#daa520']
 
+# Apply dark theme to matplotlib
+plt.style.use('dark_background')
 fig, axes = plt.subplots(2, 1, figsize=(12, 10))
+fig.patch.set_facecolor('#1a1a2e')
+for ax in axes:
+    ax.set_facecolor('#16213e')
 
 axes[0].stackplot(land_coverage_df['Year'],
                   land_coverage_df['Forest'],
@@ -203,12 +208,13 @@ axes[0].stackplot(land_coverage_df['Year'],
                   colors=colors,
                   alpha=0.8)
 
-axes[0].set_xlabel('Year', fontsize=12)
-axes[0].set_ylabel('Coverage (%)', fontsize=12)
-axes[0].set_title('Land Coverage Composition Over Time', fontsize=14, fontweight='bold')
-axes[0].legend(loc='upper right')
-axes[0].grid(True, alpha=0.3)
+axes[0].set_xlabel('Year', fontsize=12, color='#e0e0e0')
+axes[0].set_ylabel('Coverage (%)', fontsize=12, color='#e0e0e0')
+axes[0].set_title('Land Coverage Composition Over Time', fontsize=14, fontweight='bold', color='#34e89e')
+axes[0].legend(loc='upper right', facecolor='#1a1a2e', edgecolor='#34e89e')
+axes[0].grid(True, alpha=0.2, color='#34e89e')
 axes[0].set_ylim(0, 100)
+axes[0].tick_params(colors='#e0e0e0')
 
 for category, color in zip(categories, colors):
     axes[1].plot(land_coverage_df['Year'],
@@ -219,16 +225,17 @@ for category, color in zip(categories, colors):
                  linewidth=2,
                  markersize=6)
 
-axes[1].set_xlabel('Year', fontsize=12)
-axes[1].set_ylabel('Coverage (%)', fontsize=12)
-axes[1].set_title('Individual Land Coverage Trends', fontsize=14, fontweight='bold')
-axes[1].legend(loc='best')
-axes[1].grid(True, alpha=0.3)
+axes[1].set_xlabel('Year', fontsize=12, color='#e0e0e0')
+axes[1].set_ylabel('Coverage (%)', fontsize=12, color='#e0e0e0')
+axes[1].set_title('Individual Land Coverage Trends', fontsize=14, fontweight='bold', color='#34e89e')
+axes[1].legend(loc='best', facecolor='#1a1a2e', edgecolor='#34e89e')
+axes[1].grid(True, alpha=0.2, color='#34e89e')
+axes[1].tick_params(colors='#e0e0e0')
 
 plt.tight_layout()
 
 buf = BytesIO()
-plt.savefig(buf, format='png', dpi=150, bbox_inches='tight')
+plt.savefig(buf, format='png', dpi=150, bbox_inches='tight', facecolor='#1a1a2e', edgecolor='none')
 buf.seek(0)
 img_base64 = base64.b64encode(buf.read()).decode('utf-8')
 plt.close()
