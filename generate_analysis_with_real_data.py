@@ -284,9 +284,11 @@ map_body = body_match.group(1) if body_match else ''
 scripts = re.findall(r'<script[^>]*>.*?</script>', full_map_html, re.DOTALL)
 map_scripts = '\n'.join(scripts)
 
-# Get all link tags for CSS
+# Get only Leaflet CSS links (exclude Bootstrap to avoid style conflicts)
 links = re.findall(r'<link[^>]*>', full_map_html)
-map_links = '\n'.join(links)
+# Filter to only include Leaflet-related CSS, not Bootstrap
+leaflet_links = [link for link in links if 'leaflet' in link.lower() and 'bootstrap' not in link.lower()]
+map_links = '\n'.join(leaflet_links)
 
 print("✓ Map created and ready for embedding")
 

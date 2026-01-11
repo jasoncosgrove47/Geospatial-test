@@ -148,9 +148,6 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
 </head>
@@ -236,7 +233,7 @@ for i, year in enumerate(years):
             </div>
 
             <p><strong>Data Source:</strong> Synthetic (based on FAO/World Bank documented rates)</p>
-            <p><strong>Generated:</strong> 2026-01-11 20:45:46</p>
+            <p><strong>Generated:</strong> 2026-01-11 20:50:24</p>
         </div>
 
         <div class="section">
@@ -268,7 +265,7 @@ for i, year in enumerate(years):
                 
     
     
-            <div class="folium-map" id="map_d2cee69c3460f75c8a58310ccfb43216" ></div>
+            <div class="folium-map" id="map_f0f33bd5c9badb8dcf2335daeca397ba" ></div>
         
 
             </div>
@@ -283,8 +280,8 @@ for i, year in enumerate(years):
 <script>
     
     
-            var map_d2cee69c3460f75c8a58310ccfb43216 = L.map(
-                "map_d2cee69c3460f75c8a58310ccfb43216",
+            var map_f0f33bd5c9badb8dcf2335daeca397ba = L.map(
+                "map_f0f33bd5c9badb8dcf2335daeca397ba",
                 {
                     center: [-2.0, 28.5],
                     crs: L.CRS.EPSG3857,
@@ -298,58 +295,58 @@ for i, year in enumerate(years):
 
         
     
-            var tile_layer_a31bc1a69820da5c4e744f9a34ddce8f = L.tileLayer(
+            var tile_layer_0ea020579730d55e256b490ae06bf653 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_a31bc1a69820da5c4e744f9a34ddce8f.addTo(map_d2cee69c3460f75c8a58310ccfb43216);
+            tile_layer_0ea020579730d55e256b490ae06bf653.addTo(map_f0f33bd5c9badb8dcf2335daeca397ba);
         
     
-            var rectangle_9f174cf1c13b5c9bb6bed10c70ec09bc = L.rectangle(
+            var rectangle_e144f3064880c2dc2549c32dfa4705f6 = L.rectangle(
                 [[-3.0, 27.5], [-1.0, 29.5]],
                 {"bubblingMouseEvents": true, "color": "#4CAF50", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4CAF50", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_d2cee69c3460f75c8a58310ccfb43216);
+            ).addTo(map_f0f33bd5c9badb8dcf2335daeca397ba);
         
     
-        var popup_ffce0463caf8333fae38fd1511b17ab5 = L.popup({"maxWidth": "100%"});
+        var popup_b143c1fd2861754668a42bf722d28a77 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_b2e128ccaecddc348d62702ac654ceeb = $(`<div id="html_b2e128ccaecddc348d62702ac654ceeb" style="width: 100.0%; height: 100.0%;">Study Area: Eastern DRC (Kivu Region)</div>`)[0];
-                popup_ffce0463caf8333fae38fd1511b17ab5.setContent(html_b2e128ccaecddc348d62702ac654ceeb);
+                var html_0f962780a46a2140a0df9470770c1c0e = $(`<div id="html_0f962780a46a2140a0df9470770c1c0e" style="width: 100.0%; height: 100.0%;">Study Area: Eastern DRC (Kivu Region)</div>`)[0];
+                popup_b143c1fd2861754668a42bf722d28a77.setContent(html_0f962780a46a2140a0df9470770c1c0e);
             
         
 
-        rectangle_9f174cf1c13b5c9bb6bed10c70ec09bc.bindPopup(popup_ffce0463caf8333fae38fd1511b17ab5)
+        rectangle_e144f3064880c2dc2549c32dfa4705f6.bindPopup(popup_b143c1fd2861754668a42bf722d28a77)
         ;
 
         
     
     
-            var marker_4ad30f5155364d821003fbfe2a5d53c1 = L.marker(
+            var marker_54dce61d8209bae65510645f2009513d = L.marker(
                 [-2.0, 28.5],
                 {}
-            ).addTo(map_d2cee69c3460f75c8a58310ccfb43216);
+            ).addTo(map_f0f33bd5c9badb8dcf2335daeca397ba);
         
     
-            var icon_a8b0411ed8f6d4ca92e4875e50054a7b = L.AwesomeMarkers.icon(
+            var icon_7789036b2d3faf4ee980c9e3c315361e = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_4ad30f5155364d821003fbfe2a5d53c1.setIcon(icon_a8b0411ed8f6d4ca92e4875e50054a7b);
+            marker_54dce61d8209bae65510645f2009513d.setIcon(icon_7789036b2d3faf4ee980c9e3c315361e);
         
     
-        var popup_ff6de86112044f8af4c56c2f8b3e3987 = L.popup({"maxWidth": "100%"});
+        var popup_a76fd0df67063920c033dc8e276c97ce = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_58fabe1530ca09f860c7dfb048418368 = $(`<div id="html_58fabe1530ca09f860c7dfb048418368" style="width: 100.0%; height: 100.0%;"><b>Eastern DRC (Kivu Region)</b><br>Eastern DRC</div>`)[0];
-                popup_ff6de86112044f8af4c56c2f8b3e3987.setContent(html_58fabe1530ca09f860c7dfb048418368);
+                var html_630c8bc84fd5686a82fc124d7cddc3ad = $(`<div id="html_630c8bc84fd5686a82fc124d7cddc3ad" style="width: 100.0%; height: 100.0%;"><b>Eastern DRC (Kivu Region)</b><br>Eastern DRC</div>`)[0];
+                popup_a76fd0df67063920c033dc8e276c97ce.setContent(html_630c8bc84fd5686a82fc124d7cddc3ad);
             
         
 
-        marker_4ad30f5155364d821003fbfe2a5d53c1.bindPopup(popup_ff6de86112044f8af4c56c2f8b3e3987)
+        marker_54dce61d8209bae65510645f2009513d.bindPopup(popup_a76fd0df67063920c033dc8e276c97ce)
         ;
 
         
@@ -497,7 +494,7 @@ for i, year in enumerate(years):
             <p><strong>Land Coverage Analysis</strong></p>
             <p>Democratic Republic of Congo - Eastern Kivu Region</p>
             <p>Data Source: Synthetic (based on FAO/World Bank documented rates)</p>
-            <p>Generated: 2026-01-11 20:45:46</p>
+            <p>Generated: 2026-01-11 20:50:24</p>
         </div>
     </div>
 </body>
