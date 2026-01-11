@@ -31,6 +31,7 @@ wheels/
 _site/
 *.html
 !land_coverage_analysis.html
+!study_area_map.html
 *_files/
 
 # Data files
