@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_516fbd069b2f63b1f0fdacb23a3bccf4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_516fbd069b2f63b1f0fdacb23a3bccf4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_516fbd069b2f63b1f0fdacb23a3bccf4 = L.map(
+                "map_516fbd069b2f63b1f0fdacb23a3bccf4",
+                {
+                    center: [-2.0, 28.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_28e82316842d94783c4ae960664c7f08 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_28e82316842d94783c4ae960664c7f08.addTo(map_516fbd069b2f63b1f0fdacb23a3bccf4);
+        
+    
+            var rectangle_6069f3c2d80865754cbd6b7565a9001d = L.rectangle(
+                [[-3.0, 27.5], [-1.0, 29.5]],
+                {"bubblingMouseEvents": true, "color": "#4CAF50", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4CAF50", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_516fbd069b2f63b1f0fdacb23a3bccf4);
+        
+    
+        var popup_fbb1d962ee4a97fb0239a1cd0d7c164f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b727346b059ab224054f86e52266b51 = $(`<div id="html_6b727346b059ab224054f86e52266b51" style="width: 100.0%; height: 100.0%;">Study Area: Eastern DRC (Kivu Region)</div>`)[0];
+                popup_fbb1d962ee4a97fb0239a1cd0d7c164f.setContent(html_6b727346b059ab224054f86e52266b51);
+            
+        
+
+        rectangle_6069f3c2d80865754cbd6b7565a9001d.bindPopup(popup_fbb1d962ee4a97fb0239a1cd0d7c164f)
+        ;
+
+        
+    
+    
+            var marker_e9c56642a26397f85471009b9edae3f4 = L.marker(
+                [-2.0, 28.5],
+                {}
+            ).addTo(map_516fbd069b2f63b1f0fdacb23a3bccf4);
+        
+    
+            var icon_0b19555dab8d7375f2949a4926c5777f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e9c56642a26397f85471009b9edae3f4.setIcon(icon_0b19555dab8d7375f2949a4926c5777f);
+        
+    
+        var popup_b7466d5b16880c4e609c662dc939578c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e60923f57647957d1dd8160c7ceeee1 = $(`<div id="html_0e60923f57647957d1dd8160c7ceeee1" style="width: 100.0%; height: 100.0%;"><b>Eastern DRC (Kivu Region)</b><br>Eastern DRC</div>`)[0];
+                popup_b7466d5b16880c4e609c662dc939578c.setContent(html_0e60923f57647957d1dd8160c7ceeee1);
+            
+        
+
+        marker_e9c56642a26397f85471009b9edae3f4.bindPopup(popup_b7466d5b16880c4e609c662dc939578c)
+        ;
+
+        
+    
+</script>
+</html>
